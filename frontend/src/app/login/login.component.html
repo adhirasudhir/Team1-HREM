@@ -1,0 +1,55 @@
+<div class="parent">   
+  <div class="container" [ngClass]="isSignDivVisible ? 'active' :'' " id="container">
+    <div class="form-container sign-in" >
+        
+
+            <form (ngSubmit)="onLogin()">
+              <h1>Sign In</h1>
+                <span>Use your email and password</span>
+              
+                <input type="email" id="form2Example11" 
+                  placeholder="Email address" [(ngModel)]="email" name="email" />
+             
+                <input type="password" id="form2Example22"  [(ngModel)]="password"  placeholder="Password" name="password"/>
+                
+             
+
+              <button class="btn btn-primary btn-block mb-3" type="submit">Log In</button>
+
+            </form>
+            <div *ngIf="message" class="alert alert-danger">{{ message }}</div>
+            
+          </div>
+
+          <div class="form-container sign-up" >
+            <form (ngSubmit)="onSubmit()">
+                <h2>Create Account</h2>
+                <span>Use your email for registration</span>
+                <input type="email" id="form2Example11" class="form-control custom-input" placeholder="Email address" [(ngModel)]="email" name="email" />
+                <input type="password" id="form2Example22" class="form-control custom-input" placeholder="Password" [(ngModel)]="password" name="password"/>
+                <button type="submit">Sign Up</button>
+            </form>
+            <!-- Display error message if registration fails -->
+            <div *ngIf="message" class="alert alert-danger">{{ message }}</div>
+          </div>
+
+
+          <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all site features</p>
+                    <button type="button" class="hidden" id="login" (click)="isSignDivVisible = false">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all site features</p>
+                    <button type="button" class="hidden" id="register" (click)="isSignDivVisible = true">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+      </div>
+   
+

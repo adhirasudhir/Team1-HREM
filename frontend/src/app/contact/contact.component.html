@@ -1,0 +1,58 @@
+<section>
+    <div class="container">
+      <!-- Contact Info -->
+      <div class="contactInfo"> 
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span><img src="../../assets/images/location.jpg"></span>
+            <span>National Skill Training Institute for Women<br>
+                D-1, Block D, Sector 1, Noida,<br>
+                Uttar Pradesh 201301</span>
+          </li>
+          <li>
+            <span><img src="../../assets/images/mail.jpg"></span>
+            <span><a href="mailto:noida&#64;dgt.gov.in">noida&#64;dgt.gov.in</a></span>
+          </li>
+          <li>
+            <span><img src="../../assets/images/call.jpg"></span>
+            <span>0120 253 5266</span>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Contact Form -->
+      <div class="contactForm">
+        <h2>Send a Message</h2>
+        <div class="formBox">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+            <div class="inputBox">
+              <input type="text" name="first_name" required [(ngModel)]="formData.first_name">
+              <span>First Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="last_name" required [(ngModel)]="formData.last_name">
+              <span>Last Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="email" name="email" required [(ngModel)]="formData.email">
+              <span>Email Address</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="mobile_number" required [(ngModel)]="formData.mobile_number">
+              <span>Mobile Number</span>
+            </div>
+            <div class="inputBox">
+              <textarea name="message" required [(ngModel)]="formData.message"></textarea>
+              <span>Write your message here...</span>
+            </div>
+            <div class="inputBox">
+              <input type="submit" value="Send">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
